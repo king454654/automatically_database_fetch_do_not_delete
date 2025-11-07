@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reporting Agent</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    select, input, button {
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      cursor: pointer;
+    }
+    #results {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reporting Agent</h1>
+
+  <button id="refreshBtn">Refresh Databases</button><br>
+
+  <label for="dbSelect">Select Database:</label><br>
+  <select id="dbSelect">
+    {% for db in databases %}
+      <option value="{{ db }}">{{ db }}</option>
+    {% endfor %}
+  </select><br>
+
+  <label for="promptInput">Enter your question:</label><br>
+  <input type="text" id="promptInput" placeholder="e.g. Show top 5 campaigns by spend" size="60" />
+  <button id="analyzeBtn">Analyze</button>
+
+  <div id="results"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const refreshBtn = document.getElementById("refreshBtn");
+      const dbSelect = document.getElementById("dbSelect");
+      const promptInput = document.getElementById("promptInput");
+      const analyzeBtn = document.getElementById("analyzeBtn");
+      const resultsDiv = document.getElementById("results");
+
+      // 🔄 Refresh database list
+      refreshBtn.onclick = async () => {
+        try {
+          const res = await fetch("/refresh_databases", { method: "POST" });
+          const data = await res.json();
+          alert(data.status || data.error);
+          location.reload();
+        } catch (err) {
+          alert("❌ Failed to refresh databases.");
+        }
+      };
+
+      // 📥 Auto-load schema when database changes
+      dbSelect.onchange = async () => {
+        const db = dbSelect.value;
+        if (!db) return;
+        try {
+          const res = await fetch("/load_schema", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ database: db })
+          });
+          const data = await res.json();
+          console.log("Schema loaded:", data.status || data.error);
+        } catch (err) {
+          console.error("Failed to load schema:", err);
+        }
+      };
+
+      // 🔍 Analyze prompt
+      analyzeBtn.onclick = async () => {
+        const db = dbSelect.value;
+        const prompt = promptInput.value.trim();
+        if (!db || !prompt) return alert("Please select a database and enter a question.");
+
+        resultsDiv.innerHTML = "⏳ Running analysis...";
+
+        try {
+          const res = await fetch("/analyze", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ database: db, prompt })
+          });
+          const data = await res.json();
+
+          if (data.error) {
+            resultsDiv.innerHTML = `<p style="color:red;">❌ ${data.error}</p>`;
+            return;
+          }
+
+          let html = `<h3>Insight</h3><p>${data.insight}</p>`;
+          html += `<h3>SQL Query</h3><pre>${data.sql}</pre>`;
+          html += `<h3>Results</h3><table border="1" cellpadding="5" cellspacing="0"><tr>`;
+          html += data.columns.map(col => `<th>${col}</th>`).join("") + "</tr>";
+          html += data.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("");
+          html += "</table>";
+
+          resultsDiv.innerHTML = html;
+        } catch (err) {
+          resultsDiv.innerHTML = `<p style="color:red;">Failed to analyze prompt.</p>`;
+        }
+      };
+    });
+  </script>
+</body>
+</html>
