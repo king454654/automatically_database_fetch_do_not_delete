@@ -1,0 +1,11 @@
+1. cd [local_path]
+2. git init
+3. git remote add origin https://pexgit.growipx.com/[your repo name]/[project name].git
+(optional)-- 4. git clone https://pexgit.growipx.com/[your repo name]/[project name].git
+5. git checkout -b [your branch name]
+6. git add .
+7. git commit -m [give any commit text] 
+8. git push -u origin [your branch name]
+9. git pull origin [your branch name] --rebase
+10. git push -u origin [your branch name]
+11. git push -u origin [your branch name] --force

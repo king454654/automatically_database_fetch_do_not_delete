@@ -1,0 +1,2505 @@
+[
+  {
+    "database": "information_schema",
+    "tables": [
+      {
+        "name": "catalog_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "catalog_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "catalogs",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "check_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "check_clause",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "column_masks",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "mask_name",
+            "type": "string"
+          },
+          {
+            "column_name": "using_columns",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "column_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "columns",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "column_default",
+            "type": "string"
+          },
+          {
+            "column_name": "is_nullable",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "is_identity",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_generation",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_start",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_increment",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_maximum",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_minimum",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_cycle",
+            "type": "string"
+          },
+          {
+            "column_name": "is_generated",
+            "type": "string"
+          },
+          {
+            "column_name": "generation_expression",
+            "type": "string"
+          },
+          {
+            "column_name": "is_system_time_period_start",
+            "type": "string"
+          },
+          {
+            "column_name": "is_system_time_period_end",
+            "type": "string"
+          },
+          {
+            "column_name": "system_time_period_timestamp_generation",
+            "type": "string"
+          },
+          {
+            "column_name": "is_updatable",
+            "type": "string"
+          },
+          {
+            "column_name": "partition_index",
+            "type": "int"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "constraint_column_usage",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "constraint_table_usage",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "information_schema_catalog_name",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "key_column_usage",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "position_in_unique_constraint",
+            "type": "int"
+          }
+        ]
+      },
+      {
+        "name": "parameters",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "parameter_mode",
+            "type": "string"
+          },
+          {
+            "column_name": "is_result",
+            "type": "string"
+          },
+          {
+            "column_name": "as_locator",
+            "type": "string"
+          },
+          {
+            "column_name": "parameter_name",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "parameter_default",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "referential_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "match_option",
+            "type": "string"
+          },
+          {
+            "column_name": "update_rule",
+            "type": "string"
+          },
+          {
+            "column_name": "delete_rule",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routine_columns",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routine_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routines",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_type",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "routine_body",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_definition",
+            "type": "string"
+          },
+          {
+            "column_name": "external_name",
+            "type": "string"
+          },
+          {
+            "column_name": "external_language",
+            "type": "string"
+          },
+          {
+            "column_name": "parameter_style",
+            "type": "string"
+          },
+          {
+            "column_name": "is_deterministic",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_data_access",
+            "type": "string"
+          },
+          {
+            "column_name": "is_null_call",
+            "type": "string"
+          },
+          {
+            "column_name": "security_type",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "row_filters",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "filter_name",
+            "type": "string"
+          },
+          {
+            "column_name": "target_columns",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schema_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schema_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schemata",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_deferrable",
+            "type": "string"
+          },
+          {
+            "column_name": "initially_deferred",
+            "type": "string"
+          },
+          {
+            "column_name": "enforced",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "tables",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_insertable_into",
+            "type": "string"
+          },
+          {
+            "column_name": "commit_action",
+            "type": "string"
+          },
+          {
+            "column_name": "table_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          },
+          {
+            "column_name": "data_source_format",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_sub_directory",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_path",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "views",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "view_definition",
+            "type": "string"
+          },
+          {
+            "column_name": "check_option",
+            "type": "string"
+          },
+          {
+            "column_name": "is_updatable",
+            "type": "string"
+          },
+          {
+            "column_name": "is_insertable_into",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "is_materialized",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volume_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volume_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volumes",
+        "columns": [
+          {
+            "column_name": "volume_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_type",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_location",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "views": [
+      {
+        "name": "catalog_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "catalog_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "catalogs",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "check_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "check_clause",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "column_masks",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "mask_name",
+            "type": "string"
+          },
+          {
+            "column_name": "using_columns",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "column_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "columns",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "column_default",
+            "type": "string"
+          },
+          {
+            "column_name": "is_nullable",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "is_identity",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_generation",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_start",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_increment",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_maximum",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_minimum",
+            "type": "string"
+          },
+          {
+            "column_name": "identity_cycle",
+            "type": "string"
+          },
+          {
+            "column_name": "is_generated",
+            "type": "string"
+          },
+          {
+            "column_name": "generation_expression",
+            "type": "string"
+          },
+          {
+            "column_name": "is_system_time_period_start",
+            "type": "string"
+          },
+          {
+            "column_name": "is_system_time_period_end",
+            "type": "string"
+          },
+          {
+            "column_name": "system_time_period_timestamp_generation",
+            "type": "string"
+          },
+          {
+            "column_name": "is_updatable",
+            "type": "string"
+          },
+          {
+            "column_name": "partition_index",
+            "type": "int"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "constraint_column_usage",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "constraint_table_usage",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "information_schema_catalog_name",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "key_column_usage",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "position_in_unique_constraint",
+            "type": "int"
+          }
+        ]
+      },
+      {
+        "name": "parameters",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "parameter_mode",
+            "type": "string"
+          },
+          {
+            "column_name": "is_result",
+            "type": "string"
+          },
+          {
+            "column_name": "as_locator",
+            "type": "string"
+          },
+          {
+            "column_name": "parameter_name",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "parameter_default",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "referential_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "unique_constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "match_option",
+            "type": "string"
+          },
+          {
+            "column_name": "update_rule",
+            "type": "string"
+          },
+          {
+            "column_name": "delete_rule",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routine_columns",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "ordinal_position",
+            "type": "int"
+          },
+          {
+            "column_name": "column_name",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routine_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "routines",
+        "columns": [
+          {
+            "column_name": "specific_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "specific_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_name",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_type",
+            "type": "string"
+          },
+          {
+            "column_name": "data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "full_data_type",
+            "type": "string"
+          },
+          {
+            "column_name": "character_maximum_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "character_octet_length",
+            "type": "bigint"
+          },
+          {
+            "column_name": "numeric_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_precision_radix",
+            "type": "int"
+          },
+          {
+            "column_name": "numeric_scale",
+            "type": "int"
+          },
+          {
+            "column_name": "datetime_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "interval_type",
+            "type": "string"
+          },
+          {
+            "column_name": "interval_precision",
+            "type": "int"
+          },
+          {
+            "column_name": "maximum_cardinality",
+            "type": "bigint"
+          },
+          {
+            "column_name": "routine_body",
+            "type": "string"
+          },
+          {
+            "column_name": "routine_definition",
+            "type": "string"
+          },
+          {
+            "column_name": "external_name",
+            "type": "string"
+          },
+          {
+            "column_name": "external_language",
+            "type": "string"
+          },
+          {
+            "column_name": "parameter_style",
+            "type": "string"
+          },
+          {
+            "column_name": "is_deterministic",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_data_access",
+            "type": "string"
+          },
+          {
+            "column_name": "is_null_call",
+            "type": "string"
+          },
+          {
+            "column_name": "security_type",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "row_filters",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "filter_name",
+            "type": "string"
+          },
+          {
+            "column_name": "target_columns",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schema_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schema_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "schemata",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_constraints",
+        "columns": [
+          {
+            "column_name": "constraint_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "constraint_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_deferrable",
+            "type": "string"
+          },
+          {
+            "column_name": "initially_deferred",
+            "type": "string"
+          },
+          {
+            "column_name": "enforced",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "table_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "tables",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "table_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_insertable_into",
+            "type": "string"
+          },
+          {
+            "column_name": "commit_action",
+            "type": "string"
+          },
+          {
+            "column_name": "table_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          },
+          {
+            "column_name": "data_source_format",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_sub_directory",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_path",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "views",
+        "columns": [
+          {
+            "column_name": "table_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "table_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "table_name",
+            "type": "string"
+          },
+          {
+            "column_name": "view_definition",
+            "type": "string"
+          },
+          {
+            "column_name": "check_option",
+            "type": "string"
+          },
+          {
+            "column_name": "is_updatable",
+            "type": "string"
+          },
+          {
+            "column_name": "is_insertable_into",
+            "type": "string"
+          },
+          {
+            "column_name": "sql_path",
+            "type": "string"
+          },
+          {
+            "column_name": "is_materialized",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volume_privileges",
+        "columns": [
+          {
+            "column_name": "grantor",
+            "type": "string"
+          },
+          {
+            "column_name": "grantee",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "privilege_type",
+            "type": "string"
+          },
+          {
+            "column_name": "is_grantable",
+            "type": "string"
+          },
+          {
+            "column_name": "inherited_from",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volume_tags",
+        "columns": [
+          {
+            "column_name": "catalog_name",
+            "type": "string"
+          },
+          {
+            "column_name": "schema_name",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_name",
+            "type": "string"
+          },
+          {
+            "column_name": "tag_value",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "volumes",
+        "columns": [
+          {
+            "column_name": "volume_catalog",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_schema",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_name",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_type",
+            "type": "string"
+          },
+          {
+            "column_name": "volume_owner",
+            "type": "string"
+          },
+          {
+            "column_name": "comment",
+            "type": "string"
+          },
+          {
+            "column_name": "storage_location",
+            "type": "string"
+          },
+          {
+            "column_name": "created",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "created_by",
+            "type": "string"
+          },
+          {
+            "column_name": "last_altered",
+            "type": "timestamp"
+          },
+          {
+            "column_name": "last_altered_by",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]
